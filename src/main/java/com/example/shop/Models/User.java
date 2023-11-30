@@ -3,12 +3,10 @@ package com.example.shop.Models;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Set;
 
 @Entity
-@Table(name = "user")
+@Table(name = "app_user")
 @Data
 public class User {
     @Id

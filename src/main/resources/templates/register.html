@@ -117,7 +117,7 @@
                     name="phone"
                     placeholder="Enter phone number"
                     th:field="*{phone}"
-                    type="email"
+                    type="phone"
             />
             <p th:errors="*{phone}" class="text-danger"
                th:if="${#fields.hasErrors('phone')}"></p>
