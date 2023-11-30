@@ -1,26 +1,24 @@
-package com.example.shop.models.entities;
+package com.example.shop.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "admin")
+@Table(name = "user")
 @Data
-public class Admin {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(nullable = false)
-    private String login;
-
+    private String username;
     @Column(nullable = false)
     private String password;
-
     @Column(nullable = false)
-    private String name;
-
-    @Column(nullable = false)
-    private String surname;
+    private String email;
+    @Column
+    private String phone;
+    @Column
+    private String image;
 
 }
