@@ -1,4 +1,4 @@
-package com.example.shop.Services.impl;
+package com.example.shop.Services.Impl;
 
 import com.example.shop.Models.DTO.UserDTO;
 import com.example.shop.Models.User;
