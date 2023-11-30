@@ -1,4 +1,4 @@
-package com.example.shop.Model;
+package com.example.shop.Models;
 
 public enum Role {
     USER, ADMIN,MANAGER

@@ -1,9 +1,8 @@
-package com.example.shop.services.impl;
+package com.example.shop.Services.impl;
 
-import com.example.shop.Model.DTO.UserDTO;
-import com.example.shop.Model.User;
-import com.example.shop.repositiories.UserRepo;
-import com.example.shop.services.CreateUser;
+import com.example.shop.Models.DTO.UserDTO;
+import com.example.shop.Models.User;
+import com.example.shop.Services.CreateUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

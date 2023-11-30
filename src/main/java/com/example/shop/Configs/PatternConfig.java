@@ -1,4 +1,4 @@
-package com.example.shop.Config;
+package com.example.shop.Configs;
 
 import java.util.regex.Pattern;
 

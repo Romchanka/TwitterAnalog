@@ -1,4 +1,4 @@
-package com.example.shop.Model.DTO;
+package com.example.shop.Models.DTO;
 
 import lombok.*;
 
