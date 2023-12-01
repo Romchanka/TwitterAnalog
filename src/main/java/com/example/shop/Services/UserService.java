@@ -5,9 +5,6 @@ import com.example.shop.Models.User;
 import org.springframework.http.ResponseEntity;
 
 public interface UserService {
-    ResponseEntity<String>create(UserDTO userDTO);
+    ResponseEntity<String> saveUser(UserDTO userDTO);
 
-    User findUserByEmail(String email);
-
-    void saveUser(UserDTO userDTO);
 }

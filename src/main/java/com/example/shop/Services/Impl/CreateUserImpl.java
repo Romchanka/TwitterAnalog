@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class CreateUserImpl implements UserService {
 
     @Override
-    public ResponseEntity<String> create(UserDTO userDTO) {
+    public ResponseEntity<String> saveUser(UserDTO userDTO) {
         User user = new User();
         user.setUsername(userDTO.getLastName());
         user.setUsername(userDTO.getFirstName());
@@ -21,15 +21,5 @@ public class CreateUserImpl implements UserService {
         user.setPhone(userDTO.getPhone());
 
         return ResponseEntity.status(HttpStatus.OK).body("user created");
-    }
-
-    @Override
-    public User findUserByEmail(String email) {
-        return null;
-    }
-
-    @Override
-    public void saveUser(UserDTO userDTO) {
-
     }
 }

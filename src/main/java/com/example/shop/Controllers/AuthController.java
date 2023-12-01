@@ -1,7 +1,8 @@
-package com.example.shop.Controllers;
+package com.example.shop.controllers;
 
 import com.example.shop.Models.DTO.UserDTO;
 import com.example.shop.Models.User;
+import com.example.shop.Repositories.UserRepo;
 import com.example.shop.Services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
@@ -14,10 +15,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AuthController {
 
-    private UserService userService;
+    private final UserService userService;
+    private final UserRepo userRepo;
 
-    public AuthController(UserService userService) {
+    public AuthController(UserService userService, UserRepo userRepo) {
         this.userService = userService;
+        this.userRepo = userRepo;
     }
 
     // AUTHENTICATION METHODS
@@ -42,7 +45,7 @@ public class AuthController {
     public String registration(@Valid @ModelAttribute("user") UserDTO userDTO,
                                BindingResult result,
                                Model model) {
-        User existing = userService.findUserByEmail(userDTO.getEmail());
+        User existing = userRepo.findByEmail(userDTO.getEmail());
 
         if (existing != null) {
             result.rejectValue("email", null,
